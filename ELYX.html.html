@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELYX ON THE ROADS</title>
+    
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff9f0; /* Soft warm yellow tint */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header in warm Orange */
+        header {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+        }
+
+        /* Main Logo and Title */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            height: 65px;
+            width: 65px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .brand h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f1c40f;
+            color: #d35400;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.15);
+            border-left: 6px solid #f39c12;
+            margin-bottom: 2.5rem;
+        }
+
+        .intro-section h2 {
+            color: #d35400;
+            margin-bottom: 0.75rem;
+        }
+
+        /* 4 Country Windows Grid */
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .countries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Country Window Card */
+        .country-window {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.12);
+            border-top: 6px solid #f39c12;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .country-window:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.22);
+        }
+
+        /* Country Header with School Logo */
+        .country-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #fef5e7;
+            padding-bottom: 0.8rem;
+        }
+
+        .country-title-box h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+        }
+
+        .school-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-top: 0.2rem;
+        }
+
+        /* School Logo Style */
+        .school-logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 2px solid #f1c40f;
+            background-color: #fff9f0;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+
+        .country-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .country-info h4, .methodical-materials h4 {
+            font-size: 0.9rem;
+            color: #d35400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .country-info p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Methodological Materials Section */
+        .methodical-materials {
+            background-color: #fef9e7;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #f1c40f;
+        }
+
+        .methodical-materials ul {
+            padding-left: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .methodical-materials li {
+            margin-bottom: 0.3rem;
+        }
+
+        .methodical-materials a {
+            color: #d35400;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .methodical-materials a:hover {
+            text-decoration: underline;
+            color: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e67e22;
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem;
+            margin-top: 3rem;
+            font-weight: 600;
+        }
+		.upload-btn {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 0.8rem;
+}
+
+.upload-btn:hover {
+    background-color: #d35400;
+}
+
+/* Paslēpj parasto pelēko sistēmas pogu */
+.file-input {
+    display: none !important;
+}
+	/* Paslēpj failus, kas pārsniedz 4 failu limitu */
+.file-list li.hidden-file {
+    display: none;
+}
+
+/* Poga "Show more" / "Show less" */
+.more-btn {
+    background: transparent;
+    border: none;
+    color: #d35400;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.more-btn:hover {
+    color: #e67e22;
+}	
+		</style>
+</head>
+<body>
+
+    <!-- Header with Embedded Image for Main Logo -->
+    <header>
+        <div class="brand">
+            <!-- Izmantots tiešais attēls, kas neradīs kļūdas -->
+            <img src="https://school-education.ec.europa.eu/sites/default/files/styles/square_thumbnail/public/2026-03/PHOTO-2026-01-09-00-37-31.jpg?itok=9w2CSYHG" alt="ELYX ON THE ROADS logo" id="mainLogo">
+            <h1>ELYX ON THE ROADS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#latvia">Latvia</a></li>
+                <li><a href="#poland">Poland</a></li>
+                <li><a href="#greece">Greece</a></li>
+                <li><a href="#turkiye">Türkiye</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- About Section -->
+        <section class="intro-section">
+            <h2>About the Project "ELYX ON THE ROADS"</h2>
+            <p>
+                Our project aims to raise students’ awareness of the United Nations Sustainable Development Goals and encourage them to become responsible, empathetic, and environmentally conscious global citizens. Through international cooperation, students will explore environmental, economic, and social challenges while learning how their everyday choices can contribute to a safer and more sustainable future. 
+Through digital storytelling, fairy-tale writing, international activities, discussions, and practical tasks, students will develop sustainable habits, creativity, critical thinking, empathy, and problem-solving skills. They will learn about issues such as climate change, responsible consumption, equality, and social inclusion. The project will also promote cooperation between students from different countries and cultures, helping them understand their role in creating positive change in their schools, communities, and the wider world.
+            </p>
+        </section>
+
+        <!-- 4 Country Windows -->
+        <section class="countries-grid">
+            
+            <!-- 1. LATVIA -->
+            <div class="country-window" id="latvia">
+                <div>
+                    <div class="country-header">
+                        <div class="country-title-box">
+                            <h3>🇱🇻 Latvia</h3>
+                            <div class="school-name">Mālpils vidusskola</div>
+                        </div>
+                        <!-- Skolas logo vieta (vietas turētājs ar tekstu LV) -->
+                        <img src="https://malpilsvsk.lv/wp-content/uploads/2023/08/cropped-MALPILS_vsk_logo-01.png" alt="Mālpils vidusskola Logo" class="school-logo">
+                    </div>
+                    <div class="country-info">
+                        <h4>Partner Information:</h4>
+                        <p>Mālpils Secondary School is located in a rural municipality and plays an important role in a community that has faced various socio-economic challenges. The school is committed to providing all students, regardless of their background, with equal access to quality education and opportunities for personal development. Particular attention is given to students who may experience additional difficulties in their learning journey.
+
+The school’s strategy is aligned with the Sigulda Municipality Education Ecosystem Development Strategy 2023–2028. Mālpils Secondary School promotes modern and diverse educational opportunities, inclusive education, the integration of culture into the learning process, and the development of students’ digital skills.
+</p>
+</div>
+                </div>
+                <!-- Document Folder & Upload -->
+                <!-- PAREIZAIS BLOKS LATVIJAI -->
+<div class="folder-section">
+    <h4>📁 Methodological Materials Folder</h4>
+    <!-- Tiešā saite uz mākoņmapu, kas nekad nepazudīs -->
+    <a href="https://drive.google.com/drive/folders/1OgmuHlP24il2kKCiaa5cwLT68yvIeoZW" target="_blank" class="upload-btn">
+        📂 Open Online Folder
+    </a>
+</div>
+            </div>
+            <!-- 2. POLAND -->
+            <div class="country-window" id="poland">
+                <div>
+                    <div class="country-header">
+                        <div class="country-title-box">
+                            <h3>🇵🇱 Poland</h3>
+                            <div class="school-name">FUNDACJA TALE EURO EST</div>
+                        </div>
+                        <!-- Skolas logo vieta -->
+                        <img src="https://scontent.frix5-1.fna.fbcdn.net/v/t39.30808-1/308723218_183504494178770_5623128004786946421_n.png?stp=dst-png&cstp=mx170x170&ctp=s170x170&_nc_cat=100&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=GjDeFUI3tv0Q7kNvwGpJXR9&_nc_oc=AdqtE4ZjnhYFY9I_gWTEsxGavOIuRf_qSwBy9T13CvszNAMRZj9e9dpc3HPAy-8T6N4&_nc_zt=24&_nc_ht=scontent.frix5-1.fna&_nc_gid=TxHdMMiYiAScCs-iL9hhcQ&_nc_ss=7a2a8&oh=00_AQJzsdzbH9f1KG1o9ev3awyRu0_pdCCbhYDA6Yk2E3iugQ&oe=6AA6052B" alt="FUNDACJA TALE EURO EST Logo" class="school-logo">
+                    </div>
+                    <div class="country-info">
+                        <h4>Partner Information:</h4>
+                        <p>Our foundation follows national and European guidelines and provides an integrated model of education, vocational training, and labour-market support. While each area maintains its specific role, they work together to offer services that respond to the educational and professional needs of individuals.
+
+Our approach is centred on people, equal access to services, active citizenship, and the development of essential skills. Cooperation is strengthened through Local Training Pacts, which bring together educational institutions, organisations, and local partners to plan and implement relevant training opportunities.
+</p>
+ </div>
+                </div>
+
+                <!-- Document Folder & Upload -->
+                <div class="folder-section">
+    <h4>📁 Methodological Materials Folder</h4>
+    <!-- Tiešā saite uz mākoņmapu, kas nekad nepazudīs -->
+    <a href="https://drive.google.com/drive/folders/1GftGXf3JV5dsuw_hZNx30zstjO-6rHtb" target="_blank" class="upload-btn">
+        📂 Open Online Folder
+    </a>
+</div>
+            </div>
+
+            <!-- 3. GREECE -->
+            <div class="country-window" id="greece">
+                <div>
+                    <div class="country-header">
+                        <div class="country-title-box">
+                            <h3>🇬🇷 Greece</h3>
+                            <div class="school-name">1o DIMOTIKO SXOLEIO ITEAS</div>
+                        </div>
+                        <!-- Skolas logo vieta -->
+                       
+                    </div>
+                    <div class="country-info">
+                        <h4>Partner Information:</h4>
+                        <p>The 1st Primary School of Itea provides education for 191 students aged 6 to 12, supported by 32 teachers. The school offers a broad curriculum that includes languages, mathematics, science, environmental studies, arts, physical education, computer science, and social sciences. Inclusive education is one of the school’s main priorities.
+
+The school provides an extended programme until 5:30 p.m., allowing students to participate in drama, music, STEM, and sports workshops. Its facilities include a computer laboratory, assembly hall, library, canteen, and art classroom. The school is actively involved in eTwinning and environmental projects focused on the sea, water, olive groves, and mountain hiking. Students also participate in sports activities and national mathematics and science competitions.
+</p>
+                 </div>
+                </div>
+
+                <!-- Document Folder & Upload -->
+                <div class="folder-section">
+    <h4>📁 Methodological Materials Folder</h4>
+    <!-- Tiešā saite uz mākoņmapu, kas nekad nepazudīs -->
+    <a href="https://drive.google.com/drive/folders/1UIPfh2pFNNuTD1AfGwshLC9QnvkrTXdT" target="_blank" class="upload-btn">
+        📂 Open Online Folder
+    </a>
+</div>
+            </div>
+
+            <!-- 4. TÜRKIYE -->
+            <div class="country-window" id="turkiye">
+                <div>
+                    <div class="country-header">
+                        <div class="country-title-box">
+                            <h3>🇹🇷 Türkiye</h3>
+                            <div class="school-name">Guzeloba Ilkokulu</div>
+                        </div>
+                        <!-- Skolas logo vieta -->
+                        <img src="https://guzelobailkokulu.meb.k12.tr/tema/tema/6/assets/images/meb-logo.png" alt="Mālpils vidusskola Logo" class="school-logo">
+                    </div>
+                    <div class="country-info">
+                        <h4>Partner Information:</h4>
+                        <p>Güzeloba Primary School (GPS) is a large public school with approximately 1,200 pupils aged 6 to 11. The school offers a wide range of activities, including art, music, dance, coding, sports, and intelligence games. It is also actively involved in environmental, eTwinning, and STEAM projects focusing on sustainability, recycling, responsible consumption, and healthy living.
+</p>
+                   </div>
+                </div>
+
+                <!-- Document Folder & Upload -->
+                <div class="folder-section">
+    <h4>📁 Methodological Materials Folder</h4>
+    <!-- Tiešā saite uz mākoņmapu, kas nekad nepazudīs -->
+    <a href="https://drive.google.com/drive/folders/1DmuDpaJIXJkRkU00vE2CLm9JyHecrC1x" target="_blank" class="upload-btn">
+        📂 Open Online Folder
+    </a>
+ </div>
+                </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ELYX ON THE ROADS. All rights reserved.</p>
+    </footer>
+<!-- ŠIS SKRIPTS TRŪKA JŪSU KODĀ -->
+    <script>
+        function handleFolderUpload(event, listId) {
+            const fileInput = event.target;
+            const fileListContainer = document.getElementById(listId);
+
+            if (fileInput.files.length > 0) {
+                // Izdzēš ziņojumu "No documents uploaded yet."
+                const emptyMsg = fileListContainer.querySelector('.empty-msg');
+                if (emptyMsg) {
+                    emptyMsg.remove();
+                }
+
+                // Parāda katru failu sarakstā
+                Array.from(fileInput.files).forEach(file => {
+                    const fileURL = URL.createObjectURL(file);
+                    const listItem = document.createElement('li');
+                    
+                    const fileLink = document.createElement('a');
+                    fileLink.href = fileURL;
+                    fileLink.target = '_blank';
+                    
+                    // Parāda mapes ceļu un faila nosaukumu
+                    const relativePath = file.webkitRelativePath || file.name;
+                    fileLink.textContent = '📄 ' + relativePath;
+
+                    listItem.appendChild(fileLink);
+                    fileListContainer.appendChild(listItem);
+                });
+
+                fileInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
