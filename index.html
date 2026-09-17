@@ -6,6 +6,72 @@
     <title>ELYX ON THE ROADS</title>
     
     <style>
+		/* Jaunās sadaļas pamata stils */
+.results-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1100px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.results-section h2 {
+    color: #d35400;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5rem;
+}
+
+/* Kartīšu izkārtojums */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.material-card {
+    background-color: #fdfefe;
+    border: 1px solid #f39c12;
+    border-radius: 8px;
+    padding: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.material-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(230, 126, 34, 0.2);
+}
+
+.material-card h3 {
+    margin-top: 0;
+    color: #e67e22;
+    font-size: 1.1rem;
+}
+
+.material-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Lejupielādes poga */
+.download-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.download-link:hover {
+    background-color: #d35400;
+}
         /* Base styles */
         * {
             box-sizing: border-box;
