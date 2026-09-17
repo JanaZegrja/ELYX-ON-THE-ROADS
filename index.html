@@ -6,6 +6,29 @@
     <title>ELYX ON THE ROADS</title>
     
     <style>
+		/* Standarta pogu stils visām valstīm */
+.country-btn {
+    color: #ffffff !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 0.95rem;
+}
+
+.country-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Speciāls stils garajai "Results" pogai, lai tā nekristu ārā no rindas */
+.results-btn {
+    background-color: #d35400 !important; /* Nedaudz izteiksmīgāks oranžais fons */
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;      /* Nedaudz mazāks burtu izmērs, lai ietilptu */
+    white-space: nowrap;                /* Neļauj tekstam dalīties vairākās rindās */
+}
 		/* Valstu un rezultātu pogu stils */
 .country-btn {
     color: #ffffff !important;         /* Baltā krāsā */
@@ -293,7 +316,7 @@
     </div>
 	        <nav>
             <ul>
-				<a href="results.html" class="country-btn">Results & Deliverables</a>
+				<a href="results.html" class="country-btn results-btn">Results & Deliverables</a>
                 <li><a href="#latvia">Latvia</a></li>
                 <li><a href="#poland">Poland</a></li>
                 <li><a href="#greece">Greece</a></li>
