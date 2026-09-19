@@ -13,11 +13,32 @@
             padding: 0;
         }
 
-        /* Galvenes stils (atbilst galvenajai lapai) */
+        /* Navigācijas josla atpakaļ uz galveno lapu */
+        .nav-bar {
+            background-color: #2c3e50;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: #e67e22;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Lapas galvene */
         header {
             background: linear-gradient(135deg, #e67e22, #d35400);
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -29,106 +50,122 @@
 
         header p {
             margin-top: 0.5rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            font-size: 1.1rem;
         }
 
-        /* Navigācija atpakaļ */
-        .nav-bar {
-            background-color: #2c3e50;
-            padding: 0.8rem;
-            text-align: center;
-        }
-
-        .back-btn {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            background-color: #e67e22;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .back-btn:hover {
-            background-color: #d35400;
-        }
-
-        /* Saturs */
+        /* Galvenais konteiners */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 2rem;
+        }
+
+        /* Materiālu režģis */
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
         }
 
+        /* Katra materiāla kartīte */
         .card {
             background: white;
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 1.8rem;
             border-left: 5px solid #e67e22;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card h3 {
             margin-top: 0;
             color: #d35400;
+            font-size: 1.3rem;
         }
 
-        .file-link {
+        .card p {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Poga tiešajai lejupielādei / skatīšanai */
+        .file-btn {
             display: inline-block;
-            margin-top: 1rem;
-            color: #2980b9;
+            text-align: center;
+            background-color: #2980b9;
+            color: white;
             text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
             font-weight: bold;
+            transition: background 0.3s;
         }
 
-        .file-link:hover {
-            text-decoration: underline;
+        .file-btn:hover {
+            background-color: #1f618d;
         }
     </style>
 </head>
 <body>
 
     <div class="nav-bar">
-        <a href="index.html" class="back-btn">← Back to Main Hub</a>
+        <a href="index.html" class="back-btn">← Back to Main Page</a>
     </div>
 
     <header>
         <h1>Results & Deliverables</h1>
-        <p>ELYX ON THE ROADS - Joint Outcomes & Methodological Materials</p>
+        <p>Centralized Repository of ELYX ON THE ROADS Project Outputs</p>
     </header>
 
     <div class="container">
-        <h2>Project Materials & Output Folders</h2>
-        <p>Here you can access all shared results, reports, and methodology materials developed by partner schools.</p>
+        <p class="intro-text">
+            Welcome to the official project outcomes page. Here you can directly access and download all final reports, educational toolkits, research findings, and mobility deliverables produced during the project.
+        </p>
 
         <div class="results-grid">
-            <!-- 1. Materiāls -->
+
+            <!-- 1. DOKUMENTS / ZIŅOJUMS -->
             <div class="card">
-                <h3>📘 Methodological Guide</h3>
-                <p>Summary of educational activities and road-learning tools created during the project.</p>
-                <a href="#" class="file-link" target="_blank">Open Folder / File ↗</a>
+                <div>
+                    <h3>📄 Final Project & Research Report</h3>
+                    <p>A comprehensive report detailing the overall outcomes, mobility evaluations, and SDG awareness impact across all four partner countries (Latvia, Poland, Greece, Türkiye).</p>
+                </div>
+                <!-- Nomainiet saiti uz jūsu PDF failu vai Google Drive saiti -->
+                <a href="files/Final_Project_Report.pdf" class="file-btn" download target="_blank">Download PDF Report 📥</a>
             </div>
 
-            <!-- 2. Materiāls -->
+            <!-- 2. MAZĀKUMTAUTĪBU / IZGLĪTĪBAS MATERIĀLI -->
             <div class="card">
-                <h3>📊 Joint Report & Evaluation</h3>
-                <p>Final project evaluation, partner feedback, and summary reports.</p>
-                <a href="#" class="file-link" target="_blank">Open Folder / File ↗</a>
+                <div>
+                    <h3>📘 Educational Toolkit & Activities</h3>
+                    <p>A collection of practical lesson plans, road-learning activities, and digital storytelling guides developed for teachers and youth leaders.</p>
+                </div>
+                <!-- Nomainiet saiti uz failu -->
+                <a href="files/Educational_Toolkit.pdf" class="file-btn" download target="_blank">Download Toolkit 📥</a>
             </div>
 
-            <!-- 3. Materiāls -->
+            <!-- 3. MEDIA UN VIDEO MATERIĀLI -->
             <div class="card">
-                <h3>🎬 Video & Media Library</h3>
-                <p>Photos, promotional videos, and mobility highlights from all host countries.</p>
-                <a href="#" class="file-link" target="_blank">Open Folder / File ↗</a>
+                <div>
+                    <h3>🎬 Video & Visual Documentation</h3>
+                    <p>Direct video highlights, student presentations, and visual materials produced during international mobility meetings and local workshops.</p>
+                </div>
+                <!-- Saite uz video vai materiālu mapi -->
+                <a href="https://drive.google.com/your-folder-link" class="file-btn" target="_blank">Access Media Folder ↗</a>
             </div>
+
         </div>
     </div>
 
