@@ -47,45 +47,57 @@
             margin-bottom: 35px;
         }
         
-        /* Dokumentu saraksta stili */
-        .documents-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .doc-item {
+        /* Galveno sadaļu blokstils */
+        .section-block {
             border: 1px solid #e2e8f0;
             border-left: 5px solid #d97706;
             border-radius: 8px;
-            padding: 20px;
+            padding: 25px;
             background-color: #fff;
+            margin-bottom: 30px;
+        }
+        .section-block h2 {
+            font-size: 1.4rem;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+        .section-block > p {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        /* Atsevišķu dokumentu/grāmatu saraksts zem sadaļas */
+        .sub-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .sub-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            background-color: #f8fafc;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: 1px solid #f1f5f9;
             flex-wrap: wrap;
+            gap: 10px;
         }
-        .doc-info {
-            flex: 1;
-            min-width: 250px;
-        }
-        .doc-info h3 {
-            font-size: 1.2rem;
-            color: #1e293b;
-            margin-bottom: 6px;
-        }
-        .doc-info p {
-            font-size: 0.95rem;
-            color: #475569;
+        .sub-item-title {
+            font-weight: 600;
+            color: #334155;
+            font-size: 1rem;
         }
         .download-btn {
             display: inline-block;
             background-color: #0284c7;
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
             white-space: nowrap;
             transition: background-color 0.2s;
         }
@@ -101,52 +113,68 @@
     
     <h1>Project Results & Deliverables</h1>
     <p class="intro-text">
-        Welcome to the official project outcomes page. Here you can directly view and download all documents, reports, e-books, and materials created during the project.
+        Welcome to the official project outcomes page. Here you can directly view and download all documents, e-books, reports, and materials created during the project.
     </p>
 
-    <div class="documents-list">
-
-        <!-- 1. DOKUMENTS: E-Grāmata -->
-        <div class="doc-item">
-            <div class="doc-info">
-                <h3>📚 Project E-Book</h3>
-                <p>Digital educational book and practical guide developed during the project.</p>
+    <!-- 1. SADAĻA: E-BOOK (Ar 4 grāmatām apakšā) -->
+    <div class="section-block">
+        <h2>📚 Project E-Books</h2>
+        <p>Digital educational books and practical guides developed during mobility meetings.</p>
+        
+        <div class="sub-items">
+            <div class="sub-item">
+                <span class="sub-item-title">📖 E-Book 1: Latvia Mobility Guide</span>
+                <a href="files/ebook_latvia.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
-            <a href="files/Project_Ebook.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-        </div>
-
-       
-        <!-- 3. DOKUMENTS: Noslēguma ziņojums -->
-        <div class="doc-item">
-            <div class="doc-info">
-                <h3>📊 Final Project & Mobility Report</h3>
-                <p>Comprehensive summary report detailing overall outcomes and evaluations.</p>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 E-Book 2: Poland Mobility Guide</span>
+                <a href="files/ebook_poland.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
-            <a href="files/Final_Project_Report.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-        </div>
-
-        <!-- 4. DOKUMENTS: Vizuālie materiāli -->
-        <div class="doc-item">
-            <div class="doc-info">
-                <h3>🎬 Visual Documentation & Media</h3>
-                <p>Visual reports, presentation materials, and photo documentation.</p>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 E-Book 3: Greece Mobility Guide</span>
+                <a href="files/ebook_greece.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
-            <a href="files/Visual_Documentation.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-        </div>
-
-        <!-- JAUNU DOKUMENTU PIEVIENOŠANA:
-        Lai pievienotu jaunu dokumentu, vienkārši nokopējiet un ielīmējiet šo bloku:
-
-        <div class="doc-item">
-            <div class="doc-info">
-                <h3>Dokumenta Nosaukums</h3>
-                <p>Īss dokumenta apraksts.</p>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 E-Book 4: Türkiye Mobility Guide</span>
+                <a href="files/ebook_turkiye.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
-            <a href="files/Jusu_Fails.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
         </div>
-        -->
-
     </div>
+
+    <!-- 2. SADAĻA: Methodological Materials -->
+    <div class="section-block">
+        <h2>📄 Methodological Materials & Toolkits</h2>
+        <p>Educational toolkits, lesson plans, and practical activities for teachers.</p>
+        
+        <div class="sub-items">
+            <div class="sub-item">
+                <span class="sub-item-title">📑 Toolkit 1: Digital Skills & Road Learning</span>
+                <a href="files/toolkit_1.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+            <div class="sub-item">
+                <span class="sub-item-title">📑 Toolkit 2: SDG Workshop Activities</span>
+                <a href="files/toolkit_2.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. SADAĻA: Reports & Visual Documentation -->
+    <div class="section-block">
+        <h2>📊 Reports & Visual Documentation</h2>
+        <p>Summary reports and visual presentation materials from project mobility meetings.</p>
+        
+        <div class="sub-items">
+            <div class="sub-item">
+                <span class="sub-item-title">📂 Final Project Summary Report</span>
+                <a href="files/final_report.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+            <div class="sub-item">
+                <span class="sub-item-title">🎬 Visual Documentation & Photo Highlights</span>
+                <a href="files/visual_documentation.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>
