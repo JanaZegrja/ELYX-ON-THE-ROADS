@@ -18,7 +18,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             background: #ffffff;
             padding: 40px;
@@ -47,6 +47,20 @@
             margin-bottom: 35px;
         }
         
+        /* Two-Column Grid for Side-by-Side Content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: start;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 850px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .section-block {
             border: 1px solid #e2e8f0;
             border-left: 5px solid #d97706;
@@ -54,6 +68,10 @@
             padding: 25px;
             background-color: #fff;
             margin-bottom: 30px;
+        }
+        .content-grid .section-block {
+            margin-bottom: 0;
+            height: 100%;
         }
         .section-block h2 {
             font-size: 1.4rem;
@@ -102,6 +120,12 @@
         .download-btn:hover {
             background-color: #0369a1;
         }
+        .read-btn {
+            background-color: #059669;
+        }
+        .read-btn:hover {
+            background-color: #047857;
+        }
     </style>
 </head>
 <body>
@@ -113,44 +137,54 @@
     <p class="intro-text">
         Welcome to the official project outcomes page. Here you can directly view and download all documents, e-books, reports, and materials created during the project.
     </p>
-    <!-- JAUNĀ SADAĻA: DESCRIPTION OF THE RESULT -->
-    <div class="section-block">
-        <h2>📝 Description of the Result</h2>
-        <p>
-            This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.
-        </p>
-    </div>
 
-    <!-- 1. SADAĻA: PROJECT E-BOOKS -->
-    <div class="section-block">
-        <h2>📚 Project digital materials </h2>
-        <p>Digital educational books and practical guides developed during mobility meetings.</p>
-        
-        <div class="sub-items">
-            <!-- BookCreator Tiešsaistes grāmata -->
-            <div class="sub-item" style="flex-direction: column; align-items: flex-start;">
-                <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                    <span class="sub-item-title">📖 Interactive E-Book (BookCreator)</span>
-                    <a href="https://read.bookcreator.com/5-r-qN-L9NF5GcJmuQyxjQPeYprFP7w-Pt-JXB72erA/l_jR074BTf2Hvy5vu-5waQ" class="download-btn read-btn" target="_blank">Read Online 📖</a>
-                </div>
-                <!-- Iebūvēts grāmatas skatītājs -->
-                <iframe src="https://read.bookcreator.com/5-r-qN-L9NF5GcJmuQyxjQPeYprFP7w-Pt-JXB72erA/l_jR074BTf2Hvy5vu-5waQ" style="width:100%; height:450px; border:none; border-radius:8px; margin-top:12px;" allowfullscreen></iframe>
-            </div>
-            <!-- Comics Elyx PDF -->
-            <div class="sub-item">
-                <span class="sub-item-title">📖 Comics Elyx</span>
-                <a href="Comics%20Elyx.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-            </div>
+    <!-- Side-by-side Grid: Description next to Project E-Books -->
+    <div class="content-grid">
+        <!-- Column 1: Description of the Result -->
+        <div class="section-block">
+            <h2>📝 Description of the Result</h2>
+            <p>
+                This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.
+            </p>
+        </div>
+
+        <!-- Column 2: Project E-Books -->
+        <div class="section-block">
+            <h2>📚 Project E-Books</h2>
+            <p>Digital educational books and practical guides developed during mobility meetings.</p>
             
-            <!-- IAM 8 story PDF -->
-            <div class="sub-item">
-                <span class="sub-item-title">📖 IAM 8 Story</span>
-                <a href="IAM%208%20story.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            <div class="sub-items">
+                <!-- BookCreator Tiešsaistes grāmata -->
+                <div class="sub-item" style="flex-direction: column; align-items: flex-start;">
+                    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+                        <span class="sub-item-title">📖 Interactive E-Book</span>
+                        <a href="https://read.bookcreator.com/5-r-qN-L9NF5GcJmuQyxjQPeYprFP7w-Pt-JXB72erA/l_jR074BTf2Hvy5vu-5waQ" class="download-btn read-btn" target="_blank">Read Online 📖</a>
+                    </div>
+                </div>
+
+                <!-- Comics Elyx PDF -->
+                <div class="sub-item">
+                    <span class="sub-item-title">📖 Comics Elyx</span>
+                    <a href="Comics%20Elyx.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+                </div>
+                
+                <!-- IAM 8 story PDF -->
+                <div class="sub-item">
+                    <span class="sub-item-title">📖 IAM 8 Story</span>
+                    <a href="IAM%208%20story.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- 2. SADAĻA: REPORTS & VISUAL DOCUMENTATION -->
+    <!-- Interactive E-Book Viewer Full Width -->
+    <div class="section-block">
+        <h2>📖 Interactive E-Book Reader</h2>
+        <p>Preview the interactive BookCreator e-book directly below:</p>
+        <iframe src="https://read.bookcreator.com/5-r-qN-L9NF5GcJmuQyxjQPeYprFP7w-Pt-JXB72erA/l_jR074BTf2Hvy5vu-5waQ" style="width:100%; height:480px; border:none; border-radius:8px;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Reports & Visual Documentation -->
     <div class="section-block">
         <h2>🎬 Reports & Visual Documentation</h2>
         <p>Summary reports and visual presentation materials from project mobility meetings.</p>
