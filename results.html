@@ -18,7 +18,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background: #ffffff;
             padding: 40px;
@@ -44,63 +44,49 @@
         .intro-text {
             font-size: 1.05rem;
             color: #64748b;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
         
-        /* Valstu sadaļu stili */
-        .country-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #f1f5f9;
-        }
-        .country-section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        .country-title {
-            font-size: 1.5rem;
-            color: #d97706;
-            margin-bottom: 15px;
+        /* Dokumentu saraksta stili */
+        .documents-list {
             display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        /* Kartīšu režģis valsts ietvaros */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            flex-direction: column;
             gap: 20px;
         }
-        .card {
+        .doc-item {
             border: 1px solid #e2e8f0;
-            border-left: 4px solid #d97706;
+            border-left: 5px solid #d97706;
             border-radius: 8px;
             padding: 20px;
             background-color: #fff;
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        .card h3 {
-            font-size: 1.15rem;
+        .doc-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        .doc-info h3 {
+            font-size: 1.2rem;
             color: #1e293b;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
-        .card p {
+        .doc-info p {
             font-size: 0.95rem;
             color: #475569;
-            margin-bottom: 20px;
         }
         .download-btn {
-            display: block;
-            text-align: center;
+            display: inline-block;
             background-color: #0284c7;
             color: #ffffff;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
+            white-space: nowrap;
             transition: background-color 0.2s;
         }
         .download-btn:hover {
@@ -115,97 +101,60 @@
     
     <h1>Project Results & Deliverables</h1>
     <p class="intro-text">
-        Welcome to the official project outcomes page. Here you can directly access and download all final reports, educational toolkits, research findings, and mobility deliverables produced by each partner country.
+        Welcome to the official project outcomes page. Here you can directly view and download all documents, reports, e-books, and materials created during the project.
     </p>
 
-    <!-- 1. LATVIA -->
-    <div class="country-section">
-        <h2 class="country-title">🇱🇻 Latvia - Mālpils Secondary School</h2>
-        <div class="cards-grid">
-            <div class="card">
-                <div>
-                    <h3>📚 ELYX Project E-Book</h3>
-                    <p>Methodological e-book and visual educational materials produced during the mobility in Latvia.</p>
-                </div>
-                <a href="files/Latvia_Project_Ebook.pdf" class="download-btn" download target="_blank">Download Book (PDF) 📥</a>
-            </div>
-            
-            <div class="card">
-                <div>
-                    <h3>🎬 Visual Documentation</h3>
-                    <p>Visual materials, photo highlights, and workshop summaries from activities held in Latvia.</p>
-                </div>
-                <a href="files/Latvia_Visual_Documentation.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
-            </div>
-        </div>
-    </div>
+    <div class="documents-list">
 
-    <!-- 2. POLAND -->
-    <div class="country-section">
-        <h2 class="country-title">🇵🇱 Poland - Partner Deliverables</h2>
-        <div class="cards-grid">
-            <div class="card">
-                <div>
-                    <h3>📄 Polish Educational Toolkit</h3>
-                    <p>Educational materials and digital storytelling guides developed by the Polish team.</p>
-                </div>
-                <a href="files/Poland_Educational_Toolkit.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
+        <!-- 1. DOKUMENTS: E-Grāmata -->
+        <div class="doc-item">
+            <div class="doc-info">
+                <h3>📚 Project E-Book</h3>
+                <p>Digital educational book and practical guide developed during the project.</p>
             </div>
-            
-            <div class="card">
-                <div>
-                    <h3>🎬 Visual Documentation</h3>
-                    <p>Photo reports, student presentations, and mobility summaries from Poland.</p>
-                </div>
-                <a href="files/Poland_Visual_Documentation.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
-            </div>
+            <a href="files/Project_Ebook.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
         </div>
-    </div>
 
-    <!-- 3. GREECE -->
-    <div class="country-section">
-        <h2 class="country-title">🇬🇷 Greece - Partner Deliverables</h2>
-        <div class="cards-grid">
-            <div class="card">
-                <div>
-                    <h3>📄 Greek Mobility Report</h3>
-                    <p>Research findings, road learning activities, and outcome evaluations from Greece.</p>
-                </div>
-                <a href="files/Greece_Mobility_Report.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
+        <!-- 2. DOKUMENTS: Metodiskie materiāli -->
+        <div class="doc-item">
+            <div class="doc-info">
+                <h3>📄 Methodological Materials & Toolkits</h3>
+                <p>Educational toolkits, lesson plans, and practical activities for teachers.</p>
             </div>
-            
-            <div class="card">
-                <div>
-                    <h3>🎬 Visual Documentation</h3>
-                    <p>Video highlights and visual documentation of workshops conducted in Greece.</p>
-                </div>
-                <a href="files/Greece_Visual_Documentation.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
-            </div>
+            <a href="files/Methodological_Materials.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
         </div>
-    </div>
 
-    <!-- 4. TÜRKIYE -->
-    <div class="country-section">
-        <h2 class="country-title">🇹🇷 Türkiye - Partner Deliverables</h2>
-        <div class="cards-grid">
-            <div class="card">
-                <div>
-                    <h3>📄 Turkish Project Outcomes</h3>
-                    <p>Lesson plans, student mobility results, and SDG awareness impact reports from Türkiye.</p>
-                </div>
-                <a href="files/Turkiye_Project_Outcomes.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
+        <!-- 3. DOKUMENTS: Noslēguma ziņojums -->
+        <div class="doc-item">
+            <div class="doc-info">
+                <h3>📊 Final Project & Mobility Report</h3>
+                <p>Comprehensive summary report detailing overall outcomes and evaluations.</p>
             </div>
-            
-            <div class="card">
-                <div>
-                    <h3>🎬 Visual Documentation</h3>
-                    <p>Visual materials and photo documentation created during project workshops in Türkiye.</p>
-                </div>
-                <a href="files/Turkiye_Visual_Documentation.pdf" class="download-btn" download target="_blank">Download Materials (PDF) 📥</a>
-            </div>
+            <a href="files/Final_Project_Report.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
         </div>
-    </div>
 
+        <!-- 4. DOKUMENTS: Vizuālie materiāli -->
+        <div class="doc-item">
+            <div class="doc-info">
+                <h3>🎬 Visual Documentation & Media</h3>
+                <p>Visual reports, presentation materials, and photo documentation.</p>
+            </div>
+            <a href="files/Visual_Documentation.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+        </div>
+
+        <!-- JAUNU DOKUMENTU PIEVIENOŠANA:
+        Lai pievienotu jaunu dokumentu, vienkārši nokopējiet un ielīmējiet šo bloku:
+
+        <div class="doc-item">
+            <div class="doc-info">
+                <h3>Dokumenta Nosaukums</h3>
+                <p>Īss dokumenta apraksts.</p>
+            </div>
+            <a href="files/Jusu_Fails.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+        </div>
+        -->
+
+    </div>
 </div>
 
 </body>
