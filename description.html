@@ -25,6 +25,8 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
         }
         .logo-container {
             display: flex;
@@ -38,6 +40,7 @@
             border-radius: 50%;
             background-color: #fff;
             padding: 2px;
+            object-fit: cover;
         }
         .logo-text {
             color: #ffffff;
@@ -46,11 +49,12 @@
             letter-spacing: 1px;
         }
 
-        /* Navigācijas saites ar pogu PIRMS Results */
+        /* Navigācijas saites */
         nav {
             display: flex;
             gap: 20px;
             align-items: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: #ffffff;
@@ -67,7 +71,7 @@
             padding-bottom: 2px;
         }
 
-        /* Lapas satura konteiners */
+        /* Satura konteiners */
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -76,34 +80,40 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+        h1 {
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin: 30px 0 20px 0;
+        }
 
-        /* Kartīte ar oranžo malu kreisajā pusē */
-        .result-card {
+        /* Vizuālais bloks ar oranžo kreiso malu */
+        .card {
             border: 1px solid #e2e8f0;
             border-left: 5px solid #d97706;
             border-radius: 8px;
             padding: 25px;
             background-color: #ffffff;
-            margin-top: 10px;
+            margin-bottom: 25px;
         }
-        .result-card h2 {
-            font-size: 1.5rem;
+        .card h2 {
+            font-size: 1.4rem;
             color: #1e293b;
             margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
-        .result-card p {
+        .card p {
             font-size: 1rem;
-            color: #64748b;
+            color: #475569;
             line-height: 1.6;
+            white-space: pre-line; /* Uztur rindkopas un atstarpes no iekopētā teksta */
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigācijas josla -->
+    <!-- RĪKJOSLA -->
     <header>
         <a href="index.html" class="logo-container">
             <img src="logo.png" alt="ELYX Logo" class="logo-img" onerror="this.style.display='none'">
@@ -112,21 +122,44 @@
         <nav>
             <a href="description.html" class="active">Description of the Result</a>
             <a href="results.html">Results & Deliverables</a>
-            <a href="latvia.html">Latvia</a>
-            <a href="poland.html">Poland</a>
-            <a href="greece.html">Greece</a>
-            <a href="turkiye.html">Türkiye</a>
         </nav>
     </header>
 
-    <!-- Galvenais saturs -->
+    <!-- GALVENAIS SATURS -->
     <div class="container">
-        <div class="result-card">
+        
+        <!-- VISPĀRĒJAIS APRAKSTS -->
+        <div class="card">
             <h2>📝 Description of the Result</h2>
-            <p>
-                This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.
-            </p>
+            <p>This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.</p>
         </div>
+
+        <h1>📊 Country Evaluations & Feedback</h1>
+
+        <!-- 1. LATVIJA -->
+        <div class="card">
+            <h2>🇱🇻 Latvia</h2>
+            <p>[Iekopējiet Latvijas izvērtējuma tekstu šeit]</p>
+        </div>
+
+        <!-- 2. POLIJA -->
+        <div class="card">
+            <h2>🇵🇱 Poland</h2>
+            <p>[Iekopējiet Polijas izvērtējuma tekstu šeit]</p>
+        </div>
+
+        <!-- 3. GRIEĶIJA -->
+        <div class="card">
+            <h2>🇬🇷 Greece</h2>
+            <p>[Iekopējiet Grieķijas izvērtējuma tekstu šeit]</p>
+        </div>
+
+        <!-- 4. TURCIJA -->
+        <div class="card">
+            <h2>🇹🇷 Türkiye</h2>
+            <p>[Iekopējiet Turcijas izvērtējuma tekstu šeit]</p>
+        </div>
+
     </div>
 
 </body>
