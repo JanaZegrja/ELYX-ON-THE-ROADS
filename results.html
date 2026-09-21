@@ -18,7 +18,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background: #ffffff;
             padding: 40px;
@@ -47,21 +47,6 @@
             margin-bottom: 35px;
         }
         
-        /* Divu kolonnu izkārtojums */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        /* Mobilajām ierīcēm parāda vienā kolonnā */
-        @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .section-block {
             border: 1px solid #e2e8f0;
             border-left: 5px solid #d97706;
@@ -69,10 +54,6 @@
             padding: 25px;
             background-color: #fff;
             margin-bottom: 30px;
-        }
-        
-        .content-grid .section-block {
-            margin-bottom: 0;
         }
 
         .section-block h2 {
@@ -140,95 +121,89 @@
         Welcome to the official project outcomes page. Here you can directly view and download all documents, e-books, reports, and materials created during the project.
     </p>
 
-    <!-- ABAS SADAĻAS BLAKUS DIVĀS KOLONNĀS -->
-    <div class="content-grid">
-        <!-- 1. SADAĻA: DESCRIPTION OF THE RESULT -->
-        <div class="section-block">
-            <h2>📝 Description of the Result</h2>
-            <p>
-                This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.
-            </p>
-        </div>
+    <!-- 1. SADAĻA: DESCRIPTION OF THE RESULT (Atrodas virsū vienā kolonnā) -->
+    <div class="section-block">
+        <h2>📝 Description of the Result</h2>
+        <p>
+            This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.
+        </p>
+    </div>
 
-        <!-- 2. SADAĻA: PROJECT E-BOOKS -->
-        <div class="section-block">
-            <h2>📚 Project E-Books</h2>
-            <p>Digital educational books and practical guides developed during mobility meetings.</p>
+    <!-- 2. SADAĻA: PROJECT E-BOOKS -->
+    <div class="section-block">
+        <h2>📚 Project E-Books</h2>
+        <p>Digital educational books and practical guides developed during mobility meetings.</p>
+        
+        <div class="sub-items">
+            <!-- BookCreator Tiešsaistes grāmata -->
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Interactive E-Book (BookCreator)</span>
+                <a href="https://read.bookcreator.com/5-r-qN-L9NF5GcJmuQyxjQPeYprFP7w-Pt-JXB72erA/l_jR074BTf2Hvy5vu-5waQ" class="download-btn read-btn" target="_blank" rel="noopener noreferrer">Read Online 📖</a>
+            </div>
+
+            <!-- Parastie PDF faili -->
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Comics Elyx</span>
+                <a href="Comics%20Elyx.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
             
-            <div class="sub-items">
-                <!-- BookCreator Tiešsaistes grāmata (tikai poga atvēršanai jaunā cilnē) -->
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Digital Fairy tales (BookCreator)</span>
-                    <a href="https://read.bookcreator.com/5-r-qN-L9NF5GcJmuQyxjQPeYprFP7w-Pt-JXB72erA/l_jR074BTf2Hvy5vu-5waQ" class="download-btn read-btn" target="_blank" rel="noopener noreferrer">Read Online 📖</a>
-                </div>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 IAM 8 Story</span>
+                <a href="IAM%208%20story.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
 
-                <!-- Comics Elyx PDF -->
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Comics Elyx</span>
-                    <a href="Comics%20Elyx.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-                
-                <!-- IAM 8 story PDF -->
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 IAM 8 Story</span>
-                    <a href="IAM%208%20story.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Deniza And The Friends Of The Sea</span>
+                <a href="Deniza%20And%20The%20Friends%20Of%20The%20Sea.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Dirty Lake</span>
+                <a href="dirty-lake.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Emir and the Magic Bin</span>
+                <a href="Emir%20and%20the%20Magic%20Bin.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Power of the Sun</span>
+                <a href="Power%20of%20the%20Sun.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Sunny Days</span>
+                <a href="Sunny%20Days.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 My Presentation</span>
+                <a href="My%20Presentation.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Dark Lake</span>
+                <a href="Dark%20Lake.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Octopus Popy</span>
+                <a href="octopus-popy.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Talking Wave</span>
+                <a href="talking-wave.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Water Pollution and Aquatic Animals</span>
+                <a href="Water%20Pollution%20and%20Aquatic%20Animals.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
         </div>
     </div>
-<!-- JAUNIE PIEVIENOJATIE FAILI -->
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Deniza And The Friends Of The Sea</span>
-                    <a href="Deniza%20And%20The%20Friends%20Of%20The%20Sea.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
 
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Dirty Lake</span>
-                    <a href="dirty-lake.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Emir and the Magic Bin</span>
-                    <a href="Emir%20and%20the%20Magic%20Bin.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Power of the Sun</span>
-                    <a href="Power%20of%20the%20Sun.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Sunny Days</span>
-                    <a href="Sunny%20Days.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 My Presentation</span>
-                    <a href="My%20Presentation.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Dark Lake</span>
-                    <a href="Dark%20Lake.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Octopus Popy</span>
-                    <a href="octopus-popy.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Talking Wave</span>
-                    <a href="talking-wave.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-
-                <div class="sub-item">
-                    <span class="sub-item-title">📖 Water Pollution and Aquatic Animals</span>
-                    <a href="Water%20Pollution%20and%20Aquatic%20Animals.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- 3. SADAĻA: REPORTS & VISUAL DOCUMENTATION -->
     <div class="section-block">
         <h2>🎬 Reports & Visual Documentation</h2>
