@@ -132,13 +132,13 @@
     display: block;
     margin-bottom: 15px;
 }
-        .card {
+.card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: #f8fafc;
     padding: 12px 18px;
-    margin-top: 12px;
+    margin-top: 0;
     border-radius: 6px;
     border: 1px solid #f1f5f9;
     gap: 10px;
@@ -178,6 +178,12 @@
 .card .btn:hover {
     background-color: #0369a1;
 }
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
     </style>
 </head>
 <body>
@@ -190,38 +196,22 @@
         Welcome to the official project outcomes page. Here you can directly view and download all documents, e-books, reports, and materials created during the project.
     </p>
 
-    <!-- 2. SADAĻA: PROJECT E-BOOKS -->
+    <!-- PROJECT DIGITAL MATERIALS -->
     <div class="section-block">
         <h2>📚 Project digital materials </h2>
         <p>Digital educational books and practical guides developed during mobility meetings.</p>
         
         <div class="sub-items">
-            <!-- 1. Stories for Tomorrow -->
-<div class="sub-item">
-    <span class="sub-item-title">
-        📖 Stories for Tomorrow – Elyx on the Roads
-    </span>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 Stories for Tomorrow – Elyx on the Roads</span>
+                <a href="Stories%20for%20Tomorrow%20Elyx%20on%20the%20Roads%20.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
 
-    <a href="Stories%20for%20Tomorrow%20Elyx%20on%20the%20Roads%20.pdf"
-       class="download-btn"
-       download
-       target="_blank">
-        Download PDF 📥
-    </a>
-</div>
+            <div class="sub-item">
+                <span class="sub-item-title">🖼️ Poster – Stories for Tomorrow</span>
+                <a href="Poster%20stories%20for%20tomorrow%20Elyx%20on%20the%20Road.png" class="download-btn" target="_blank">Open Poster ↗</a>
+            </div>
 
-<!-- 2. Stories for Tomorrow plakāts -->
-<div class="sub-item">
-    <span class="sub-item-title">
-        🖼️ Poster – Stories for Tomorrow
-    </span>
-
-    <a href="Poster%20stories%20for%20tomorrow%20Elyx%20on%20the%20Road.png"
-       class="download-btn"
-       target="_blank">
-        Open Poster ↗
-    </a>
-</div>
             <!-- BookCreator Tiešsaistes grāmata -->
             <div class="sub-item">
                 <span class="sub-item-title">📖 Interactive E-Book (BookCreator)</span>
@@ -288,98 +278,86 @@
                 <span class="sub-item-title">📖 Water Pollution and Aquatic Animals</span>
                 <a href="Water%20Pollution%20and%20Aquatic%20Animals.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
-        </div>
-    </div>
-    <div class="sub-item">
-    <span class="sub-item-title">📖 All Different, All Equal</span>
-    <a href="All%20different%2C%20all%20equal.pdf"
-       class="download-btn" download target="_blank">
-        Download PDF 📥
-    </a>
-</div>
 
-<div class="sub-item">
-    <span class="sub-item-title">📖 No Hunger</span>
-    <a href="No%20hunger.pdf"
-       class="download-btn" download target="_blank">
-        Download PDF 📥
-    </a>
-</div>
-<!-- Tikai pēc visiem dokumentiem -->
-</div>
-</div>
-  <div class="sub-items">
-            <!-- 1. Video (Priekšstats par pirmo video) -->
-            <div class="sub-item" style="flex-direction: column; align-items: flex-start;">
-                <span class="sub-item-title">🎥 Elyx Video Highlights</span>
-                
-                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; margin: 10px 0;">
-                    <source src="Elyx%20video.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
-                
-                <a href="Elyx%20video.mp4" class="download-btn" download target="_blank">Download Video (MP4) 📥</a>
+            <div class="sub-item">
+                <span class="sub-item-title">📖 All Different, All Equal</span>
+                <a href="All%20different%2C%20all%20equal.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
+            </div>
+
+            <div class="sub-item">
+                <span class="sub-item-title">📖 No Hunger</span>
+                <a href="No%20hunger.pdf" class="download-btn" download target="_blank">Download PDF 📥</a>
             </div>
         </div>
-    <div class="card">
-        <h3>🎬 ΣΤΑΧΤΟΠΟΥΤΑ (Cinderella)</h3>
-        <p>Project mobility video documentation.</p>
-        <video controls>
-            <source src="ΣΤΑΧΤΟΠΟΥΤΑ.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <a href="ΣΤΑΧΤΟΠΟΥΤΑ.mp4" download class="btn">Download Video (.mp4) ↓</a>
     </div>
 
-    <div class="card">
-        <h3>🎬 Η XIONATH (Snow White)</h3>
-        <p>Project mobility video documentation.</p>
-<video controls>
-    <source src="snow-white.mp4.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <!-- PROJECT VIDEOS -->
+    <div class="section-block">
+        <h2>🎥 Project videos</h2>
+        <p>Video materials created during project activities and mobility meetings.</p>
 
-<a href="snow-white.mp4.mp4" download class="btn">
-    Download Video (.mp4) ↓
-</a>
-
-    <div class="card">
-        <h3>🎬 Project Mobility Video 1</h3>
-        <p>Project mobility video documentation.</p>
-        <video controls>
-            <source src="0-02-05-6bff1acf1080d7809b6be1e39c916db381efb69557db00f4a01ea5f8302edb76_b35f22e392c72c0a.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <a href="0-02-05-6bff1acf1080d7809b6be1e39c916db381efb69557db00f4a01ea5f8302edb76_b35f22e392c72c0a.mp4" download class="btn">Download Video (.mp4) ↓</a>
-    </div>
-
-    <div class="card">
-        <h3>🎬 Project Mobility Video 2</h3>
-        <p>Project mobility video documentation.</p>
-        <video controls>
-            <source src="0-02-05-d425b6bd472c3b9ad4c8e6fffc5aee521ee8b39c4eef7d7feb20f7717e9e8b34_ceb625d18794e42f.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <a href="0-02-05-d425b6bd472c3b9ad4c8e6fffc5aee521ee8b39c4eef7d7feb20f7717e9e8b34_ceb625d18794e42f.mp4" download class="btn">Download Video (.mp4) ↓</a>
-    </div>
-
-</div>
-                <!-- 2. Video (Jaunais video no Türkiye LTT) -->
-            <div class="sub-item" style="flex-direction: column; align-items: flex-start;">
-                <span class="sub-item-title">🎥 Elyx on the Roads Türkiye LTT</span>
-                
-                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; margin: 10px 0;">
-                    <source src="ELYX%20ON%20THE%20ROADS%20T%C3%9CRK%C4%B0YE%20LTT..mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
+        <div class="video-list">
+            <div class="card">
+                <h3>🎬 Elyx Video Highlights</h3>
+                <video controls>
+                    <source src="Elyx%20video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
                 </video>
-                
-                <a href="ELYX%20ON%20THE%20ROADS%20T%C3%9CRK%C4%B0YE%20LTT..mp4" class="download-btn" download target="_blank">Download Video (MP4) 📥</a>
-</div>
+                <a href="Elyx%20video.mp4" class="btn" download target="_blank">Download Video (MP4) ↓</a>
+            </div>
 
-<!-- ŠIS </div> AIZVER GALVENO BALTO KONTEINERU -->
+            <div class="card">
+                <h3>🎬 ΣΤΑΧΤΟΠΟΥΤΑ (Cinderella)</h3>
+                <p>Project mobility video documentation.</p>
+                <video controls>
+                    <source src="ΣΤΑΧΤΟΠΟΥΤΑ.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a href="ΣΤΑΧΤΟΠΟΥΤΑ.mp4" download class="btn">Download Video (.mp4) ↓</a>
+            </div>
+
+            <div class="card">
+                <h3>🎬 Η XIONATH (Snow White)</h3>
+                <p>Project mobility video documentation.</p>
+                <video controls>
+                    <source src="snow-white.mp4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a href="snow-white.mp4.mp4" download class="btn">Download Video (.mp4) ↓</a>
+            </div>
+
+            <div class="card">
+                <h3>🎬 Project Mobility Video 1</h3>
+                <p>Project mobility video documentation.</p>
+                <video controls>
+                    <source src="0-02-05-6bff1acf1080d7809b6be1e39c916db381efb69557db00f4a01ea5f8302edb76_b35f22e392c72c0a.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a href="0-02-05-6bff1acf1080d7809b6be1e39c916db381efb69557db00f4a01ea5f8302edb76_b35f22e392c72c0a.mp4" download class="btn">Download Video (.mp4) ↓</a>
+            </div>
+
+            <div class="card">
+                <h3>🎬 Project Mobility Video 2</h3>
+                <p>Project mobility video documentation.</p>
+                <video controls>
+                    <source src="0-02-05-d425b6bd472c3b9ad4c8e6fffc5aee521ee8b39c4eef7d7feb20f7717e9e8b34_ceb625d18794e42f.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a href="0-02-05-d425b6bd472c3b9ad4c8e6fffc5aee521ee8b39c4eef7d7feb20f7717e9e8b34_ceb625d18794e42f.mp4" download class="btn">Download Video (.mp4) ↓</a>
+            </div>
+
+            <div class="card">
+                <h3>🎬 Elyx on the Roads Türkiye LTT</h3>
+                <p>Project mobility video documentation.</p>
+                <video controls>
+                    <source src="ELYX%20ON%20THE%20ROADS%20T%C3%9CRK%C4%B0YE%20LTT..mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a href="ELYX%20ON%20THE%20ROADS%20T%C3%9CRK%C4%B0YE%20LTT..mp4" class="btn" download target="_blank">Download Video (MP4) ↓</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
-</html>
-            </body>
 </html>
