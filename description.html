@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description of the Result - ELYX ON THE ROADS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdfbf7;
+            color: #333;
+            line-height: 1.6;
+        }
 
+        /* Oranžā rīkjosla */
+        header {
+            background-color: #e08214;
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #fff;
+            padding: 2px;
+        }
+        .logo-text {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Navigācijas saites ar pogu PIRMS Results */
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        nav a.active {
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 2px;
+        }
+
+        /* Lapas satura konteiners */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Kartīte ar oranžo malu kreisajā pusē */
+        .result-card {
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #d97706;
+            border-radius: 8px;
+            padding: 25px;
+            background-color: #ffffff;
+            margin-top: 10px;
+        }
+        .result-card h2 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-card p {
+            font-size: 1rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigācijas josla -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="logo.png" alt="ELYX Logo" class="logo-img" onerror="this.style.display='none'">
+            <span class="logo-text">ELYX ON THE ROADS</span>
+        </a>
+        <nav>
+            <a href="description.html" class="active">Description of the Result</a>
+            <a href="results.html">Results & Deliverables</a>
+            <a href="latvia.html">Latvia</a>
+            <a href="poland.html">Poland</a>
+            <a href="greece.html">Greece</a>
+            <a href="turkiye.html">Türkiye</a>
+        </nav>
+    </header>
+
+    <!-- Galvenais saturs -->
+    <div class="container">
+        <div class="result-card">
+            <h2>📝 Description of the Result</h2>
+            <p>
+                This section provides an overview of the key outcomes and tangible outputs produced during the project implementation. The results include interactive educational resources, digital stories, comics, and video documentation created collaboratively by all participating countries.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
